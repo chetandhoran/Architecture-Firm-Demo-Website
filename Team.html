@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0%;
+        margin: 0%;
+      }
+      /* Basic styling for the card */
+      .card {
+        height: 60vh;
+        width: 30vh;
+        perspective: 1000px; /* Provides 3D perspective for the rotation effect */
+      }
+
+      .card-inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d; /* Ensures the children elements are positioned in 3D space */
+        transition: transform 2s; /* Adds a smooth transition effect */
+      }
+
+      .card:hover .card-inner {
+        transform: rotateY(
+          180deg
+        ); /* Rotates the card on hover by 180 degrees */
+      }
+
+      /* Styling for the front and back sides of the card */
+      .card-front,
+      .card-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 10%;
+        backface-visibility: hidden; /* Hides the back side when flipped */
+      }
+
+      .card-back {
+        transform: rotateY(180deg); /* Initially hides the back side */
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+      }
+      .card img {
+        height: 60vh;
+        width: 30vh;
+        border-radius: 10%;
+      }
+      .all {
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        background-color: gray;
+      }
+      #team {
+        position: absolute;
+        top: 40px;
+        font-size: 50px;
+        color: azure;
+      }
+      a {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+      h4 {
+        font-size: 25px;
+
+        font-weight: bolder;
+      }
+      h5 {
+        font-size: 20px;
+        font-style: italic;
+      }
+      @media screen and (max-width: 600px) {
+        .all {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: auto;
+        }
+        #team {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all">
+      <h1 id="team">The Team</h1>
+      <a href="Home.html" id="hm"><img src="Images/home (3).png" alt="" /></a>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="Images/shahrukh.jpg" />
+          </div>
+          <div class="card-back">
+            <!-- Content for the back side of the card -->
+
+            <h4>Shahrukh Khan</h4>
+            <br />
+            <h5>Vice President</h5>
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+            adipisci voluptas ipsam, sequi, libero veniam odit minus corrupti
+            deleniti illo necessitatibus expedita facilis et vero.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="Images/aliya.jpg" />
+          </div>
+          <div class="card-back">
+            <!-- Content for the back side of the card -->
+
+            <h4>Aliya Bhatt</h4>
+            <br />
+            <h5>Manager</h5>
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+            adipisci voluptas ipsam, sequi, libero veniam odit minus corrupti
+            deleniti illo necessitatibus expedita facilis et vero.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="Images/ranbir.jpg" />
+          </div>
+          <div class="card-back">
+            <!-- Content for the back side of the card -->
+
+            <h4>Ranbir Kapoor</h4>
+            <br />
+            <h5>Assistant Manager</h5>
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+            adipisci voluptas ipsam, sequi, libero veniam odit minus corrupti
+            deleniti illo necessitatibus expedita facilis et vero.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="Images/Vicky.jpg" />
+          </div>
+          <div class="card-back">
+            <!-- Content for the back side of the card -->
+
+            <h4>Vicky Kaushal</h4>
+            <br />
+            <h5>Team Lead</h5>
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+            adipisci voluptas ipsam, sequi, libero veniam odit minus corrupti
+            deleniti illo necessitatibus expedita facilis et vero.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="Images/katrina.jpg" />
+          </div>
+          <div class="card-back">
+            <!-- Content for the back side of the card -->
+
+            <h4>Katrina Kaif</h4>
+            <br />
+            <h5>Developer</h5>
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+            adipisci voluptas ipsam, sequi, libero veniam odit minus corrupti
+            deleniti illo necessitatibus expedita facilis et vero.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="Images/samantha.png" />
+          </div>
+          <div class="card-back">
+            <!-- Content for the back side of the card -->
+
+            <h4>Samantha Ruth Prabhu</h4>
+            <br />
+            <h5>Assistant</h5>
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+            adipisci voluptas ipsam, sequi, libero veniam odit minus corrupti
+            deleniti illo necessitatibus expedita facilis et vero.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

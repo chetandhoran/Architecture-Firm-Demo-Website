@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .container3 {
+      height: 100vh;
+      width: 100%;
+      background-color: #989898;
+      background-size: cover;
+      display: inline-block;
+      position: fixed;
+    }
+
+    .row1,
+    .row2,
+    .row3 {
+      height: 33.33vh;
+      width: 100%;
+      position: relative;
+    }
+
+    .Interior {
+      height: 30vh;
+      width: 25%;
+      display: inline-block;
+      position: relative;
+      top: 5%;
+      left: 15%;
+    }
+
+    .Decoration {
+      height: 30vh;
+      width: 25%;
+      display: inline-block;
+      position: absolute;
+      top: 5%;
+      right: 15%;
+    }
+
+    .Exterior {
+      height: 30vh;
+      width: 25%;
+      display: inline-block;
+      position: absolute;
+      top: 5%;
+      left: 5%;
+    }
+
+    .homeimg {
+      height: 33.33vh;
+      width: 30%;
+      display: inline-block;
+      position: relative;
+      top: 0%;
+      left: 35%;
+    }
+
+    .Planning {
+      height: 30vh;
+      width: 25%;
+      display: inline-block;
+      position: absolute;
+      top: 5%;
+      right: 5%;
+    }
+
+    .Design {
+      height: 30vh;
+      width: 25%;
+      display: inline-block;
+      position: absolute;
+      top: 5%;
+      left: 15%;
+    }
+
+    .Execution {
+      height: 30vh;
+      width: 25%;
+      display: inline-block;
+      position: absolute;
+      top: 5%;
+      right: 15%;
+    }
+
+    .container3 h3 {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 30px;
+      font-weight: lighter;
+      font-style: italic;
+      padding-left: 80px;
+      position: relative;
+    }
+
+    .container3 p {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      text-align: justify;
+      position: absolute;
+      top: 40%;
+    }
+
+    .Interior h3::before {
+      content: url(Images/int.png);
+      position: absolute;
+      left: 0px;
+    }
+
+    .Decoration h3::before {
+      content: url(Images/deco.png);
+      position: absolute;
+      left: 0%;
+    }
+
+    .Exterior h3::before {
+      content: url(Images/ext.png);
+      position: absolute;
+      left: 0%;
+    }
+
+    .Planning h3::before {
+      content: url(Images/planning.png);
+      position: absolute;
+      left: 0%;
+    }
+
+    .Design h3::before {
+      content: url(Images/design.png);
+      position: absolute;
+      left: 0%;
+    }
+
+    .Execution h3::before {
+      content: url(Images/execute.png);
+      position: absolute;
+      left: 0%;
+    }
+
+    @keyframes shakes {
+      0% {
+        transform: translate(1px, 1px) rotate(0deg);
+      }
+
+      10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+      }
+
+      20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+      }
+
+      30% {
+        transform: translate(3px, 2px) rotate(0deg);
+      }
+
+      40% {
+        transform: translate(1px, -1px) rotate(1deg);
+      }
+
+      50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+      }
+
+      60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+      }
+
+      70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+      }
+
+      80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+      }
+
+      90% {
+        transform: translate(1px, 2px) rotate(0deg);
+      }
+
+      100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+      }
+    }
+
+    .container3 h3:hover::before {
+      animation: shakes 0.5s infinite;
+    }
+
+    .homeimg img {
+      height: 300px;
+      width: 300px;
+      position: absolute;
+      top: 0%;
+      left: 13%;
+      filter: grayscale(100%);
+    }
+
+    .homeimg img:hover {
+      transform: rotateY(180deg);
+      filter: grayscale(0%);
+      transition: all 4s;
+    }
+
+    #about {
+      text-align: center;
+      color: white;
+      text-decoration: underline black;
+      font-style: italic;
+    }
+
+    a {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .container3 {
+        height: initial;
+        width: initial;
+        background-color: grey;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 100px;
+        position: initial;
+      }
+
+      .row1,
+      .row2,
+      .row3 {
+        height: initial;
+        width: initial;
+        position: initial;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 100px;
+      }
+
+      .Interior,
+      .Decoration,
+      .Design,
+      .Execution,
+      .Exterior,
+      .homeimg,
+      .Planning {
+        height: initial;
+        width: initial;
+        display: initial;
+        position: initial;
+        top: initial;
+        left: initial;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 10px;
+      }
+
+      .container3 h3 {
+        padding-left: initial;
+      }
+
+      .container3 p {
+        text-align: center;
+        position: initial;
+      }
+
+      .Interior h3::before {
+        position: initial;
+      }
+
+      .Decoration h3::before {
+        position: initial;
+      }
+
+      .Exterior h3::before {
+        position: initial;
+      }
+
+      .Planning h3::before {
+        position: initial;
+      }
+
+      .Design h3::before {
+        position: initial;
+      }
+
+      .Execution h3::before {
+        position: initial;
+      }
+
+      .homeimg img {
+        height: initial;
+        width: initial;
+        position: initial;
+        top: initial;
+        left: initial;
+      }
+
+      #about {
+        color: initial;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container3">
+    <h1 id="about">About Us</h1>
+    <a href="Home.html" id="hm"><img src="Images/home (3).png" alt="" /></a>
+    <div class="row1">
+      <div class="Interior">
+        <h3>Interior</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+          aspernatur saepe maxime, beatae, at dolores delectus doloribus dicta
+          officiis, sint tenetur? Officia molestiae repellat culpa?
+        </p>
+      </div>
+      <div class="Decoration">
+        <h3>Decoration</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad corporis
+          libero eligendi voluptatum aspernatur, eius dolore ducimus
+          accusantium corrupti eum? Praesentium architecto animi quae officia.
+        </p>
+      </div>
+    </div>
+    <div class="row2">
+      <div class="Exterior">
+        <h3>Exterior</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Consequuntur sunt aliquid repudiandae excepturi nulla nihil.
+          Voluptas, soluta iste aut sapiente cupiditate fugit ducimus ab
+          libero.
+        </p>
+      </div>
+      <div class="homeimg">
+        <img src="Images/centrehome1.png" />
+      </div>
+      <div class="Planning">
+        <h3>Planning</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          illo quidem repellendus perferendis dolorem placeat reprehenderit
+          quos architecto voluptas, quas tempora, sed consectetur ipsam
+          dolorum?
+        </p>
+      </div>
+    </div>
+    <div class="row3">
+      <div class="Design">
+        <h3>Design</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+          quo perspiciatis porro facilis impedit nobis sequi, possimus eum
+          reprehenderit veniam provident, dolorum quis tempora sit?
+        </p>
+      </div>
+      <div class="Execution">
+        <h3>Execution</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, aperiam
+          labore eos eligendi eaque rem maiores unde earum necessitatibus aut
+          veritatis, cupiditate, suscipit dolorem quod?
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
