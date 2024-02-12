@@ -17,7 +17,7 @@ Description and Topics covered in this Project
     <li>Layouts Using :Flex,Grid,Divs</li>
     <li>Background Setup</li>
     <li>Animations:2d,3d,Keyframes</li> 
-    <li>Mediaqerries</li> 
+    <li>Media Queries</li> 
   </ul>
   </li>
 </ul>
